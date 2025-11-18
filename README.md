@@ -1,89 +1,84 @@
-# streamlit-project
+# 📊 Data Analysis Website: Automotive Fuel Efficiency Explorer
 
+## 1. Project Overview
 
-# cd streamlit
-# streamlit run 1104.py
-# ctrl + s
-# print("hello")
-import streamlit as st
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import plotly.express as px # 인덱스 인지 못함..! as_index = False
-def show_home():
-    st.header("너는 HOME을 선택했다.")
-    st.image("cat.jpg")
-    # st.video("유튜브 URL 아무거나")
+| Category | Description |
+| :--- | :--- |
+| **Topic** | **Building an Interactive Website for Automotive Fuel Efficiency Data Analysis** |
+| **Reason for Topic Selection** | The goal was to utilize automotive data to create a **user-friendly, interactive web environment** using Streamlit. This platform allows users to visualize analysis results and explore data based on custom criteria, demonstrating the ability to build a practical data analysis tool. |
+| **Data Analysis Content** | The project uses the `mpg.csv` dataset to perform the following analyses: |
+| | - **Comparative Visualization of City Average MPG (cty) by Manufacturer** (using Matplotlib/Seaborn and Plotly). |
+| | - **Deep Dive Analysis** allowing users to select grouping variables, target columns (`cty` or `hwy`), and aggregation methods (`mean`, `max`, `min`) for custom data exploration. |
 
+---
+
+## 2. 🚀 Website Links and Demonstration
+
+* **External URL (Streamlit Cloud Deployment Link):**
+    * [Insert your Streamlit Cloud Deployment URL here]
+* **Demonstration Video (YouTube):**
+    * [Insert your YouTube Demonstration Video Link here]
+
+---
+
+## 3. 👨‍💻 Team Introduction
+
+| Role | Name | GitHub Account |
+| :--- | :--- | :--- |
+| Team Member 1 | Cha Eun-woo | [@eunwoo\_cha](https://github.com/eunwoo_cha) |
+| Team Member 2 | Byeon Woo-seok | [@wooseok\_byeon](https://github.com/wooseok_byeon) |
+| ... | ... | ... |
+
+---
+
+## 4. 📝 Code and Execution Environment
+
+### 4.1. Technologies and Libraries Used
+
+* **Python**
+* **Streamlit** (Web Dashboard Framework)
+* **Pandas** (Data Manipulation)
+* **Seaborn/Matplotlib** (Static Visualization)
+* **Plotly Express** (Interactive Visualization)
+
+### 4.2. How to Run the Website Locally
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone [Your GitHub Repository URL]
+    cd [repository-folder-name]
+    ```
+2.  **Set Up Environment:**
+    * Install the required libraries listed in `requirements.txt`:
+        ```bash
+        pip install -r requirements.txt
+        ```
+3.  **Execute Streamlit App:**
+    ```bash
+    streamlit run 1104.py
+    ```
+
+### 4.3. Key Code Functionality
+
+> Highlighting the main functions from your `1104.py` file.
+
+**`show_car` Function (Manufacturer Average MPG Analysis):**
+
+```python
 def show_car():
-    st.header("너는 자동차 분석을 선택했다.")
-    mpg = pd.read_csv("mpg.csv")
-    st.subheader("자동차데이터입니다.")
-    st.dataframe(mpg)
-
-    #manufacturer 별로 cty의 평균을 구하고, 화면에 나타내다
-    st.subheader("차동차 회사 별 도시평균 연비를 구하자")
-    mpg = mpg.groupby("manufacturer", as_index=False).agg(cty평균 = ("cty","mean"))
-    st.dataframe(mpg)
-
-    # 그래프 그리자
-    # import matplotlib.pyplot as plt
-    # sns.barplot(data = mpg, x="manufacturer", y ="cty평균") -> 강 하면 안 됨
-    fig1 = plt.figure()
-    sns.barplot(data = mpg, x="manufacturer", y ="cty평균")
-    st.pyplot(fig1)
-
-    # import plotly.express as px
-    c1 = px.bar(data_frame=mpg, x = "manufacturer", y = "cty평균")
+    # ... data loading and preprocessing
+    mpg = mpg.groupby("manufacturer", as_index=False).agg(avg_cty = ("cty","mean"))
+    
+    # Visualization using Plotly
+    c1 = px.bar(data_frame=mpg, x = "manufacturer", y = "avg_cty")
     st.plotly_chart(c1)
+
 def show_car_deep():
-
-    st.header("너는 자동차 '심층'분석을 선택했다.")
-    mpg = pd.read_csv("mpg.csv")
-    # 1. 현대차 리스트를 보여줘라. (하드코딩 -> selectbox 입력받기)
-    result2 = mpg.query("manufacturer == 'hyundai'")
-    st.subheader(" #1. 현대차 리스트 = 하드코딩")
-    st.dataframe(result2)
-
-    # 2. 현대차 리스트 - 변수 처리
-    company1 = 'hyundai'
-    result3 = mpg.query("manufacturer == @company1")
-    st.subheader(" #2. 현대차 리스트 - 변수처리")
-    st.dataframe(result3)
-
-    # 3. 회사를 사용자가 입력
-    st.subheader(" #3 회사를 사용자가 입력")
-    selectedCar = st.selectbox("자동차회사를 선택하시오", mpg['manufacturer'].unique().tolist())
-    result4 = mpg.query("manufacturer == @selectedCar")
-    st.dataframe(result4) # 여전히 하드 코딩 mpg['manufacturer'].unique().tolist() 로 해결
-
-    # 4.마음대로 데이터를 분석하기( 사용자가 옵션 선택 )
-    # 1) groupby ??? - 선택지            -input1(회사, 카테고리, 구동방식(drv), 출시년도(year))
-    # 2) cty or hwy ???                 -input2
-    # 3) 수학통계 ??? - 최대? 최소? mean?  -input3
-    input1 =  st.selectbox("그룹핑 대상 고르기", mpg.columns)
-    input2 =  st.selectbox("계산 대상 고르기", ['cty', 'hwy'])
-    input3 =  st.selectbox("계산 방법 고르기", ["mean", "max", "min"])
-  
+    # ... user selection for analysis parameters
+    input1 = st.selectbox("Group By Column", mpg.columns)
+    input2 = st.selectbox("Calculate Target", ['cty', 'hwy'])
+    input3 = st.selectbox("Calculation Method", ["mean", "max", "min"])
+ 
+    # Performing analysis based on user input
     result5 = mpg.groupby(input1).agg(value = (input2, input3))
-    st.subheader("마음대로 분석하기")
-    st.text(input1 + " 을 그룹핑해서, " + input2 + " 의 " + input3 +"(으)로 계산했다.")
     st.dataframe(result5)
-
-
-
-
-
-
-# st.sidebar.header("사이드 바 입니다.")
-# st.sidebar.image("cat.jpg")
-selectedmenu = st.sidebar.selectbox("메뉴제목입니다", ['HOME', '자동차분석', '자동차심층분석'])
-
-if selectedmenu == 'HOME':
-    show_home()
-elif selectedmenu == '자동차분석':
-    show_car()
-elif selectedmenu == '자동차심층분석':
-    show_car_deep()
-else:
-    st.header("나머지")
