@@ -89,7 +89,7 @@
 
 ---
 
-### extream.py
+### 코드 (extream.py)
 ```python
 import streamlit as st
 import pandas as pd
