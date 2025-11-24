@@ -44,27 +44,14 @@
 * **Folium, Streamlit-Folium** (전국 스마트쉼센터 지도 구현)
 * **Seaborn, Matplotlib** (시각화)
 
-### 2. 프로젝트 파일 목록 및 `requirements.txt`
+### 2. 프로젝트 파일 목록 
 
 이 프로젝트를 실행하려면 다음 파일들이 필요합니다.
 
 1.  **`extream.py`** (또는 프로젝트 코드 파일명): Streamlit 애플리케이션 코드
-2.  **`requirements.txt`** (필수 라이브러리 목록)
-3.  **데이터 파일**: `smtphone.csv`, `unemployment.csv`, `콘텐츠_유형별_트래픽_현황_최종.csv`
-4.  **이미지 파일**: `news.jpg`, `help.jpg`, 및 기타 사용된 이미지
+2.  **데이터 파일**: `smtphone.csv`, `unemployment.csv`, `콘텐츠_유형별_트래픽_현황_최종.csv`
+3.  **이미지 파일**: `news.jpg`, `help.jpg`, 및 기타 사용된 이미지
 
-> **💡 `requirements.txt` 내용
->
-> ```text
-> streamlit
-> pandas
-> seaborn
-> numpy
-> matplotlib
-> plotly-express
-> folium
-> streamlit-folium
-> ```
 
 ### 3. 웹사이트 실행 방법
 
