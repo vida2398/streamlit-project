@@ -53,7 +53,7 @@
 3.  **데이터 파일**: `smtphone.csv`, `unemployment.csv`, `콘텐츠_유형별_트래픽_현황_최종.csv`
 4.  **이미지 파일**: `news.jpg`, `help.jpg`, 및 기타 사용된 이미지
 
-> **💡 `requirements.txt` 내용 (GitHub에 별도 파일로 업로드 필요):**
+> **💡 `requirements.txt` 내용
 >
 > ```text
 > streamlit
@@ -74,11 +74,12 @@
     cd [repository-folder-name]
     ```
 2.  **환경 설정:**
-    * `requirements.txt`에 명시된 라이브러리 설치:
-        ```bash
-        pip install -r requirements.txt
-        ```
-3.  **Streamlit 실행:**
+    * Follium 라이브러리 설치:
+    ```bash
+       pip install streamlit pydeck folium streamlit-folium
+    ```
+
+3.  **Streamlit 실행:** 
     ```bash
     streamlit run extream.py
     ```
