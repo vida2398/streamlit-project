@@ -82,8 +82,14 @@
 | **`tip()`** | **디지털 디톡스를 위한 5가지 실천 습관**을 시각 자료와 함께 제공하여 과의존 탈출을 돕습니다. |
 | **`helper()`** | **전국 스마트쉼센터**의 누리집 및 소개 영상을 제공하고, Folium을 이용해 **전국의 센터 위치를 지도에 표시**하여 상담 안내를 돕습니다. |
 
-### extream.py
+---
 
+## 📽️ 시연 영상
+[![데모 영상 보기](https:// /0.jpg)](https://)
+
+---
+
+### extream.py
 ```python
 import streamlit as st
 import pandas as pd
