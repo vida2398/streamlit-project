@@ -15,7 +15,7 @@
 
 | 이름 | 역할 | GitHub |
 |------|------|------------------|
-| 장혜미 | 팀장 · 개발자 | |
+| 장혜미 | 팀장 · 개발자 |https://github.com/jang-hyemi |
 | 비다 | 개발자 | https://github.com/vida2398 |
 
 
