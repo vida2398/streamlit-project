@@ -11,11 +11,10 @@
 ---
 
 ## 🚀 웹사이트 실행 정보 및 링크
-
-* **외부 URL (Streamlit Cloud 배포 링크):**
-    * [여기에 배포한 Streamlit Cloud URL을 입력하세요]
-* **시연 동영상 (YouTube):**
-    * [여기에 YouTube 시연 영상 링크를 입력하세요]
+    * https://fred.stlouisfed.org/series/LRUNTTTTKRM156S
+    * https://www.itstat.go.kr/itstat/main.html
+    * https://www.itstat.go.kr/statHtml/statHtml.do?orgId=006&tblId=DT_127006_C005&vw_cd=undefined&list_id=undefined&scrId=&seqNo=&language=ko&obj_var_id=undefined&itm_id=undefined&conn_path=I2&path=
+    * https://www.itstat.go.kr/statHtml/statHtml.do?orgId=006&tblId=DT_ITSTAT_A000004&vw_cd=undefined&list_id=undefined&scrId=&seqNo=&language=ko&obj_var_id=undefined&itm_id=undefined&conn_path=I2&path=
 
 ---
 
@@ -34,7 +33,7 @@
 
 이 프로젝트를 실행하려면 다음 파일들이 필요합니다.
 
-1.  **`1104.py`** (또는 프로젝트 코드 파일명): Streamlit 애플리케이션 코드
+1.  **`extream.py`** (또는 프로젝트 코드 파일명): Streamlit 애플리케이션 코드
 2.  **`requirements.txt`** (필수 라이브러리 목록)
 3.  **데이터 파일**: `smtphone.csv`, `unemployment.csv`, `콘텐츠_유형별_트래픽_현황_최종.csv`
 4.  **이미지 파일**: `news.jpg`, `help.jpg`, 및 기타 사용된 이미지
@@ -66,7 +65,7 @@
         ```
 3.  **Streamlit 실행:**
     ```bash
-    streamlit run 1104.py
+    streamlit run extream.py
     ```
 
 ### 4. 주요 코드 기능 요약
