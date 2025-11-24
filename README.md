@@ -96,7 +96,7 @@
 ---
 
 ## 📽️ 시연 동영상
-[![데모 영상 보기]](https://)
+[![데모 영상 보기](https://youtu.be/F55Fu5M-GBQ/0.jpg)](https://youtu.be/F55Fu5M-GBQ)
 
 ---
 
