@@ -98,7 +98,7 @@
 
 ## 📽️ 시연 동영상
 
-[![데모 영상 보기](https://img.youtube.com/vi/66gp4Me4H1A/0.jpg)](https://www.youtube.com/66gp4Me4H1A)
+[![데모 영상 보기](https://img.youtube.com/vi/66gp4Me4H1A/0.jpg)](https://youtu.be/66gp4Me4H1A?si=Dypfjo9j23TQew8M)
 
 
 ---
